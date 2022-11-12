@@ -1,0 +1,3604 @@
+{
+	"info": {
+		"_postman_id": "a5718b1c-3a59-4dd8-8c42-218f5f0f0746",
+		"name": "Yall_App_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "avi@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "avi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "user login"
+			},
+			"response": [
+				{
+					"name": "user login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "avi@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "220"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dc-xU3nBlIIcR6+GzDvTkQ2TqsS0lA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 11:54:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"id\": 8,\n    \"email\": \"avi@test.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo4fSwiaWF0IjoxNjUwOTc0MDYzLCJleHAiOjE2NTA5Nzc2NjN9.kPh9a8NJyEs-scmEiyrdXTa2etkDqfk6Nm-8nYYd85I\"\n}"
+				},
+				{
+					"name": "user login fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "avi@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-B/6WMNlD35jLfiLIFkuWI41ryxw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 11:57:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Password Incorrect\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Peter",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Fernando",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2022/04/26",
+							"type": "text"
+						},
+						{
+							"key": "passion",
+							"value": "coding",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "peter@test.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "8521478965",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "avi",
+							"type": "text"
+						},
+						{
+							"key": "hometown",
+							"value": "Morena",
+							"type": "text"
+						},
+						{
+							"key": "current_location",
+							"value": "Morena",
+							"type": "text"
+						},
+						{
+							"key": "about_me",
+							"value": "self motivated",
+							"type": "text"
+						},
+						{
+							"key": "gender_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "Akki",
+							"type": "text"
+						},
+						{
+							"key": "is_visible_age",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_show_contact",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "is_email_visible",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_hometown_visible",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "is_job_visible",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "is_show_initials",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "job",
+							"value": "software developer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "user registration"
+			},
+			"response": [
+				{
+					"name": "registration successfull",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Peter",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Fernando",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2022/04/26",
+									"type": "text"
+								},
+								{
+									"key": "passion",
+									"value": "coding",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peter@test.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8521478965",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "hometown",
+									"value": "Morena",
+									"type": "text"
+								},
+								{
+									"key": "current_location",
+									"value": "Morena",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self motivated",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "Akki",
+									"type": "text"
+								},
+								{
+									"key": "is_visible_age",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_show_contact",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_email_visible",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_hometown_visible",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_job_visible",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_show_initials",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "software developer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "741"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e5-iEPa9kM0eUGakb4v66jj/LWZr88\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:08:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 12,\n        \"first_name\": \"Peter\",\n        \"last_name\": \"Fernando\",\n        \"dob\": \"2022-04-26\",\n        \"passion\": \"coding\",\n        \"email\": \"peter@test.com\",\n        \"mobile\": \"8521478965\",\n        \"password\": \"$2b$10$DwB4DQ7v3Up82M5i7yZVa.A7Vhw2e/RWaSc17IbJp3vtSRKhHDSk.\",\n        \"hometown\": \"Morena\",\n        \"current_location\": \"Morena\",\n        \"about_me\": \"self motivated\",\n        \"gender_id\": 1,\n        \"nickname\": \"Akki\",\n        \"is_visible_age\": true,\n        \"is_show_contact\": false,\n        \"is_email_visible\": true,\n        \"is_hometown_visible\": false,\n        \"is_job_visible\": false,\n        \"is_show_initials\": true,\n        \"job\": \"software developer\",\n        \"updatedAt\": \"2022-04-26T12:08:40.255Z\",\n        \"createdAt\": \"2022-04-26T12:08:40.255Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMn0sImlhdCI6MTY1MDk3NDkyMiwiZXhwIjoxNjUwOTc4NTIyfQ.64QXUsT53W3CTXcy_X7d_-4qaJRV6mbNR1JOPlJloyM\"\n}"
+				},
+				{
+					"name": "registration fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Peter",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Fernando",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2022/04/26",
+									"type": "text"
+								},
+								{
+									"key": "passion",
+									"value": "coding",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peter@test.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8521478965",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "hometown",
+									"value": "Morena",
+									"type": "text"
+								},
+								{
+									"key": "current_location",
+									"value": "Morena",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self motivated",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "Akki",
+									"type": "text"
+								},
+								{
+									"key": "is_visible_age",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_show_contact",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_email_visible",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_hometown_visible",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_job_visible",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "is_show_initials",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "software developer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-Rldow+d1udAWhm+WDrkQp5fSloc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:10:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Email has been already used."
+				}
+			]
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Ankit",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2021/04/26",
+							"type": "text"
+						},
+						{
+							"key": "passion",
+							"value": "Drawing",
+							"type": "text"
+						},
+						{
+							"key": "hometown",
+							"value": "dehradun",
+							"type": "text"
+						},
+						{
+							"key": "current_location",
+							"value": "delhi",
+							"type": "text"
+						},
+						{
+							"key": "job",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "about_me",
+							"value": "self obessed",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ankit @test.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9874563214",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "avi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update/8",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update",
+						"8"
+					]
+				},
+				"description": "update user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "user updated success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Ankit",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Singh",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2021/04/26",
+									"type": "text"
+								},
+								{
+									"key": "passion",
+									"value": "Drawing",
+									"type": "text"
+								},
+								{
+									"key": "hometown",
+									"value": "dehradun",
+									"type": "text"
+								},
+								{
+									"key": "current_location",
+									"value": "delhi",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "teacher",
+									"type": "text"
+								},
+								{
+									"key": "about_me",
+									"value": "self obessed",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ankit @test.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "9874563214",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "avi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update",
+								"8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-ln/ADEAdlWb4vSdOzvrHf0QDJ+Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:30:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "user updated successfully"
+				}
+			]
+		},
+		{
+			"name": "get user data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getuser/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getuser",
+						"1"
+					]
+				},
+				"description": "get data of users and data of related tables of users"
+			},
+			"response": [
+				{
+					"name": "user data fetched success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getuser/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getuser",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9e-epO0yqXrtH4fKj26JFFInnZUXzM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:38:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"first_name\": \"Rohit\",\n        \"last_name\": \"kumar\",\n        \"gender\": null,\n        \"foods\": [],\n        \"musics\": [],\n        \"pets\": [],\n        \"hobbies\": [],\n        \"going_outs\": [],\n        \"films_tvs\": [],\n        \"sports_adventures\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "user deletion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/deleteuser/8",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"deleteuser",
+						"8"
+					]
+				},
+				"description": "delete user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "user deletion success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/deleteuser/7",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"deleteuser",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-aV4uloKMPDC2VnycsrACBpQPHz4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:42:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "user succesfully deleted"
+				}
+			]
+		},
+		{
+			"name": "user password change",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "currentPassword",
+							"value": "avi",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "avnish",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/changepassword/25",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"changepassword",
+						"25"
+					]
+				},
+				"description": "change password of user using primary key of user"
+			},
+			"response": [
+				{
+					"name": "user password change success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avnish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-Gmf1hdXPHlFVm5gmUA+H5jL2d54\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:47:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"password updated successfully\"\n}"
+				},
+				{
+					"name": "user password change denied",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avnish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-gWPGAQGI8xCePJgSmV+S6tfvU+o\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:49:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"current pasword wrong\"\n}"
+				},
+				{
+					"name": "user not exist for password change",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "avi",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "avnish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changepassword/25",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changepassword",
+								"25"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-MUA/e8AkBL/yu0cvCnS2SEO817E\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:49:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"user not exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add film_tv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "film_tv",
+							"value": "PK",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setfilmstv",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setfilmstv"
+					]
+				},
+				"description": "add data in film_tv table"
+			},
+			"response": [
+				{
+					"name": "add film_tv success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "film_tv",
+									"value": "PK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/setfilmstv",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"setfilmstv"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-yblHhUrLkqSVQEsgr1Ddhn5iaUE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:56:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"film_tv\": \"PK\",\n    \"updatedAt\": \"2022-04-26T12:56:00.978Z\",\n    \"createdAt\": \"2022-04-26T12:56:00.978Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get film_tv data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getfilmstv/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getfilmstv",
+						"1"
+					]
+				},
+				"description": "get data of film_tv table"
+			},
+			"response": [
+				{
+					"name": "get film_tv data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getfilmstv/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getfilmstv",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-zF6w8MYaz3+1d9u7PyEElhQbPek\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:58:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"film_tv\": \"PK\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add foods",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "food",
+							"value": "south Indian",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setfoods",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setfoods"
+					]
+				},
+				"description": "add data in foods table"
+			},
+			"response": [
+				{
+					"name": "add foods success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "food",
+									"value": "south Indian",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/setfoods",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"setfoods"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "108"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6c-ukug41A48dN1MrccNPduNlnmQPc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:00:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"food\": \"south Indian\",\n    \"updatedAt\": \"2022-04-26T13:00:32.570Z\",\n    \"createdAt\": \"2022-04-26T13:00:32.570Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get foods data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getfoods/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getfoods",
+						"1"
+					]
+				},
+				"description": "get data of foods table"
+			},
+			"response": [
+				{
+					"name": "get foods data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getfoods/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getfoods",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-R+HKk1Lczoa9s1Ix8LWyxAEAixs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:01:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"food\": \"indian\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add going_out data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "location",
+							"value": "delhi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setgoingout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setgoingout"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "add data in going_out table"
+			},
+			"response": [
+				{
+					"name": "add going out data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "location",
+									"value": "delhi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/setgoingout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"setgoingout"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-v6NniHQabEkH8Lp8qXIMWgkvbQc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:05:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"location\": \"delhi\",\n    \"updatedAt\": \"2022-04-26T13:05:23.037Z\",\n    \"createdAt\": \"2022-04-26T13:05:23.037Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get going_out data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getgoingout/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getgoingout",
+						"1"
+					]
+				},
+				"description": "get data of going_out table"
+			},
+			"response": [
+				{
+					"name": "get going out data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getgoingout/4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getgoingout",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-F2+8WmqUU4ILE1oEY2dwYcFYe7c\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:08:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"location\": \"delhi\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add hobbies data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hobby",
+							"value": "cycling",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sethobbies",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sethobbies"
+					]
+				},
+				"description": "add data in hobbies table"
+			},
+			"response": [
+				{
+					"name": "add hobbies data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hobby",
+									"value": "cycling",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sethobbies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sethobbies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "104"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"68-qevcQpEOz90ZoyeW0ZCE4fRQvis\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:10:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"hobby\": \"cycling\",\n    \"updatedAt\": \"2022-04-26T13:10:01.308Z\",\n    \"createdAt\": \"2022-04-26T13:10:01.308Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get hobbies data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/gethobbies/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gethobbies",
+						"1"
+					]
+				},
+				"description": "get data of hobbies table"
+			},
+			"response": [
+				{
+					"name": "get hobbies data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gethobbies/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gethobbies",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-ZK+T3dVqDgiyPjpvMv3ao7tCiRU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:11:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"hobby\": \"cycling\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add musics data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "music",
+							"value": "slow songs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setmusics",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setmusics"
+					]
+				},
+				"description": "add data in musics table"
+			},
+			"response": [
+				{
+					"name": "add musics data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "music",
+									"value": "slow songs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/setmusics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"setmusics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-yMFjuj6cnyPPYJMmt4TspWXGy/I\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:13:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"music\": \"slow songs\",\n    \"updatedAt\": \"2022-04-26T13:13:30.523Z\",\n    \"createdAt\": \"2022-04-26T13:13:30.523Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get musics data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getmusics/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getmusics",
+						"1"
+					]
+				},
+				"description": "get data of musics table"
+			},
+			"response": [
+				{
+					"name": "get musics data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getmusics/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getmusics",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-RN3Ug8G4UaV7SXIcydxXqwl9jXc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:15:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"music\": \"slow songs\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add pets data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "pet",
+							"value": "rabbit",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}//setpets",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"",
+						"setpets"
+					]
+				},
+				"description": "add data in pets table"
+			},
+			"response": [
+				{
+					"name": "add pets data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pet",
+									"value": "rabbit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}//setpets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"",
+								"setpets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-KolMtgEmdtriU254AGesMdxGzxw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:16:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"pet\": \"rabbit\",\n    \"updatedAt\": \"2022-04-26T13:16:54.101Z\",\n    \"createdAt\": \"2022-04-26T13:16:54.101Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get pets data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}//getpets/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"",
+						"getpets",
+						"1"
+					]
+				},
+				"description": "get data of pets table"
+			},
+			"response": [
+				{
+					"name": "get pets data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}//getpets/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"",
+								"getpets",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-bTJ+TAfqKhQynumw0pZqvaAyYCg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:17:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"pet\": \"rabbit\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add sports_adventures data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sport_adventure",
+							"value": "basketball",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setsportsadventures",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setsportsadventures"
+					]
+				},
+				"description": "add data in sports_adventures table"
+			},
+			"response": [
+				{
+					"name": "add sports adventures data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sport_adventure",
+									"value": "basketball",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/setsportsadventures",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"setsportsadventures"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"75-mOzR0AS2JzmyOaduxLVEOU9F+zo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:20:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"sport_adventure\": \"basketball\",\n    \"updatedAt\": \"2022-04-26T13:20:14.410Z\",\n    \"createdAt\": \"2022-04-26T13:20:14.410Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get sports_adventures data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getsportsadventures/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getsportsadventures",
+						"1"
+					]
+				},
+				"description": "get data of sports_adventures table"
+			},
+			"response": [
+				{
+					"name": "get sports adventures data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getsportsadventures/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getsportsadventures",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-S6k8s+nFGikAn7kurRjQiapN22E\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:21:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"sport_adventure\": \"basketball\",\n        \"users\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add users_film_tv data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "film_tv_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usersfilmstv",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usersfilmstv"
+					]
+				},
+				"description": "add data in user_film_tv table"
+			},
+			"response": [
+				{
+					"name": "add users_film_tv data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "film_tv_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersfilmstv",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersfilmstv"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"71-EpsPgH8+bVLuATZlDBqDjUKTKX4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:24:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"film_tv_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:24:54.889Z\",\n    \"createdAt\": \"2022-04-26T13:24:54.889Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add users_foods data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "food_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usersfoods",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usersfoods"
+					]
+				},
+				"description": "add data in user_food table"
+			},
+			"response": [
+				{
+					"name": "add users_foods data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "food_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersfoods",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersfoods"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6e-ICl/A+KKpXJu12PuuAi4T4t/Tlk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:28:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"food_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:28:13.348Z\",\n    \"createdAt\": \"2022-04-26T13:28:13.348Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add user_going_out data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "going_out_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usersgoingout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usersgoingout"
+					]
+				},
+				"description": "add data in user_going_out table"
+			},
+			"response": [
+				{
+					"name": "add user_going_out data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "going_out_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersgoingout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersgoingout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"73-DA6XnI6TzrkLql5KyOMptvH+8Pk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:30:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"going_out_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:29:59.985Z\",\n    \"createdAt\": \"2022-04-26T13:29:59.985Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add user_hobby data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "hobby_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usershobby",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usershobby"
+					]
+				},
+				"description": "add data in user_hobby table"
+			},
+			"response": [
+				{
+					"name": "add user_hobby data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "hobby_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usershobby",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usershobby"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-rG8/31xfvd0hQOG6QCRy7a9GlBU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:33:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"hobby_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:33:35.247Z\",\n    \"createdAt\": \"2022-04-26T13:33:35.247Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add user_music data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "music_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usersmusics",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usersmusics"
+					]
+				},
+				"description": "add data in user_music table"
+			},
+			"response": [
+				{
+					"name": "add user_music data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "music_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersmusics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersmusics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-7NDLBkuEGak0X0MLpKc034NjVY0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:35:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"user_id\": 3,\n    \"music_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:35:59.204Z\",\n    \"createdAt\": \"2022-04-26T13:35:59.204Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add user_pet data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}//userspets",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"",
+						"userspets"
+					]
+				},
+				"description": "add data in user_pet table"
+			},
+			"response": [
+				{
+					"name": "add user_pet data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "pet_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}//userspets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"",
+								"userspets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-EN+6koJRwq1CXwkFeAHU5h478kI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:37:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"pet_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:37:30.831Z\",\n    \"createdAt\": \"2022-04-26T13:37:30.831Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add user_sports_adventures data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "sport_adventure_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usersportsadventures",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usersportsadventures"
+					]
+				},
+				"description": "add data in user_sport_adventure table"
+			},
+			"response": [
+				{
+					"name": "add user_sports_adventures data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "sport_adventure_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersportsadventures",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersportsadventures"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "121"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"79-U6X3NzNmGlY673l9Kz+Mvn41isQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:41:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 3,\n    \"sport_adventure_id\": 3,\n    \"updatedAt\": \"2022-04-26T13:41:40.238Z\",\n    \"createdAt\": \"2022-04-26T13:41:40.238Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add users_gallery data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file_type",
+							"value": "Adhaar",
+							"type": "text"
+						},
+						{
+							"key": "media_url",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "file_extension",
+							"value": ".png",
+							"type": "text"
+						},
+						{
+							"key": "is_primary",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "sequence_number",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setusersgallery",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setusersgallery"
+					]
+				},
+				"description": "add data in users_gallery table"
+			},
+			"response": [
+				{
+					"name": "add users_gallery data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "file_type",
+									"value": "Adhaar",
+									"type": "text"
+								},
+								{
+									"key": "media_url",
+									"value": "abcd",
+									"type": "text"
+								},
+								{
+									"key": "file_extension",
+									"value": ".png",
+									"type": "text"
+								},
+								{
+									"key": "is_primary",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sequence_number",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usersgallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usersgallery"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c9-Oj5xduB80v2mLOjhebymYme7ERM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:45:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 1,\n    \"file_type\": \"Adhaar\",\n    \"media_url\": \"abcd\",\n    \"file_extension\": \".png\",\n    \"is_primary\": false,\n    \"sequence_number\": 1,\n    \"updatedAt\": \"2022-04-26T13:45:53.609Z\",\n    \"createdAt\": \"2022-04-26T13:45:53.609Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get users_gallery data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file_type",
+							"value": "Adhaar",
+							"type": "text"
+						},
+						{
+							"key": "media_url",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "file_extension",
+							"value": ".png",
+							"type": "text"
+						},
+						{
+							"key": "is_primary",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "sequence_number",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getusersgallery",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getusersgallery"
+					]
+				},
+				"description": "add data in users_gallery table"
+			},
+			"response": [
+				{
+					"name": "get users_gallery data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "file_type",
+									"value": "Adhaar",
+									"type": "text"
+								},
+								{
+									"key": "media_url",
+									"value": "abcd",
+									"type": "text"
+								},
+								{
+									"key": "file_extension",
+									"value": ".png",
+									"type": "text"
+								},
+								{
+									"key": "is_primary",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sequence_number",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/getusersgallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getusersgallery"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "403"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"193-8gPZN3/pUiwI/buXnswcF5rijvg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 06:04:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"user_id\": 1,\n        \"file_type\": \"Adhaar\",\n        \"media_url\": \"abcd\",\n        \"file_extension\": \"png\",\n        \"is_primary\": true,\n        \"sequence_number\": 1,\n        \"createdAt\": \"2022-04-26T08:33:04.674Z\",\n        \"updatedAt\": \"2022-04-26T08:33:04.674Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 1,\n        \"file_type\": \"Adhaar\",\n        \"media_url\": \"abcd\",\n        \"file_extension\": \".png\",\n        \"is_primary\": false,\n        \"sequence_number\": 1,\n        \"createdAt\": \"2022-04-26T13:45:53.609Z\",\n        \"updatedAt\": \"2022-04-26T13:45:53.609Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add gender data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "gender",
+							"value": "female",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setgenders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setgenders"
+					]
+				},
+				"description": "add data in genders table"
+			},
+			"response": [
+				{
+					"name": "add gender data success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/genders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-6KOJHqR1qX8jX4yilvNOwtEthM8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 13:48:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"gender\": \"male\",\n    \"updatedAt\": \"2022-04-26T13:48:25.656Z\",\n    \"createdAt\": \"2022-04-26T13:48:25.656Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get genders data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getgenders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getgenders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get genders data success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getgenders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getgenders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "516"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"204-Tmx8JNN+wSaowcmqDJgcM2VFLdc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 06:19:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"gender\": \"Male\",\n        \"createdAt\": \"2022-04-26T08:33:04.594Z\",\n        \"updatedAt\": \"2022-04-26T08:33:04.594Z\"\n    },\n    {\n        \"id\": 4,\n        \"gender\": null,\n        \"createdAt\": \"2022-04-26T13:47:29.339Z\",\n        \"updatedAt\": \"2022-04-26T13:47:29.339Z\"\n    },\n    {\n        \"id\": 5,\n        \"gender\": \"male\",\n        \"createdAt\": \"2022-04-26T13:48:25.656Z\",\n        \"updatedAt\": \"2022-04-26T13:48:25.656Z\"\n    },\n    {\n        \"id\": 1,\n        \"gender\": \"male\",\n        \"createdAt\": \"2022-04-27T06:01:02.065Z\",\n        \"updatedAt\": \"2022-04-27T06:01:02.065Z\"\n    },\n    {\n        \"id\": 6,\n        \"gender\": \"female\",\n        \"createdAt\": \"2022-04-27T06:18:08.080Z\",\n        \"updatedAt\": \"2022-04-27T06:18:08.080Z\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
